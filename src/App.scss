@@ -10,6 +10,17 @@
   --clr-detail-1: #0376c2;
   // --clr-detail: #004777
 
+  --clr-mongodb : #47A248;
+  --clr-express : #333;
+  --clr-react : #61DAFB;
+  --clr-node : #339933;
+  --clr-postman : #FF6C37;
+  --clr-git: #F05032;
+  --clr-sass: #CC6699;
+  --clr-heroku: #430098;
+  --clr-netlify: #00C7B7;
+  --clr-vsc: #007ACC;
+
   --margin-inline: 1.25em;
   --padding-1 : 0.625em;
   --padding-2 : 1.25em;
@@ -52,6 +63,8 @@
   white-space: nowrap;
 }
 
+
+
 .header {
   backdrop-filter: brightness(80%) blur(5px);
   background-color: var(--clr-dark);
@@ -81,10 +94,7 @@
 
     &__button {
       background-color: white;
-      // border: 2px solid white;
-      // border: transparent;
-      // color: var(--clr-detail-2);
-      // color: white;
+     
 
       .text {
         background-image: var(--gradient-blue);
@@ -135,25 +145,111 @@
 .about {
   // border: 2px solid blue;
   &__wrapper {
-    border: 2px solid red;
-    padding: 2em 3em;
+    // border: 2px solid red;
+    padding: var(--padding-2);
   }
 
   &__text {
+    // border:3px solid red;
+    margin-block: 20px;
     text-align: justify;
     color: var(--clr-dark);
     // width: 60%;
     font-size: 1.05em;
   }
+  &__technologies{
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-3);
+    padding-block: 1em;
+    
+    .mern{
+      display: flex;
+      flex-direction: column;
+      align-items: center;    
+
+      &__logo{
+        margin-bottom: 5px;
+        height: 60px;
+        padding: var(--padding-1);
+        border:3px solid black;
+        border-radius: 50%;
+
+        &--mongodb{
+          border-color: var(--clr-mongodb);
+          fill : var(--clr-mongodb);
+        }
+
+        &--express{
+          border-color: var(--clr-express);
+          fill : var(--clr-express);
+        }
+
+        &--react{
+          border-color: var(--clr-react); 
+          fill : var(--clr-react); 
+        }
+
+        &--node{
+          border-color: var(--clr-node);
+          fill : var(--clr-node);
+        }
+      }
+    }
+
+    .tools{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100px;
+      text-align: center;
+      // border:3px solid black;
+
+      &__logo{
+        margin-bottom: 10px;
+        width: 50px;
+        // height: 70px;
+        // padding: var(--padding-1);
+       
+        &--git{      
+          fill : var(--clr-git);
+        }
+
+        &--visual{
+          fill : var(--clr-vsc);
+        }
+
+        &--sass{
+          fill : var(--clr-sass); 
+        }
+
+        &--heroku{
+          fill : var(--clr-heroku);
+        }
+
+        &--postman{
+          fill : var(--clr-postman);
+        }
+
+        &--netlify{
+          fill : var(--clr-netlify);
+        }
+      }
+    }
+  }
 }
 
 .projects {
-  border: 2px solid pink;
+  clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+  // margin-top: 5vw;
+  border: 4px solid pink;
   background: linear-gradient(to top, #3e3e41, var(--clr-dark));
   background-size: contain;
-  padding-block: 3em 5em;
-  height: 400px;
-  /* background: linear-gradient(to right bottom, var(--clr-dark), rgb(67, 67, 67)); */
-  // height: 600px;
-  clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+  padding-block: calc( 5vw + 3em) 5em;
+  border:3px solid green;
+
+  &__title{
+    color: white
+  }
+
 }

@@ -2,14 +2,28 @@ import "./App.scss";
 import logo from "./assets/img/logo.png";
 import logoGithub from "./assets/img/github.svg";
 
+//MERN LOGOS
+import { ReactComponent as LogoMongoDB } from "./assets/img/mongodb.svg";
+import { ReactComponent as LogoExpress } from "./assets/img/express.svg";
+import { ReactComponent as LogoReact } from "./assets/img/react.svg";
+import { ReactComponent as LogoNode } from "./assets/img/nodedotjs.svg";
+
+//TOOL LOGOS
+import { ReactComponent as LogoNetlify } from "./assets/img/netlify.svg";
+import { ReactComponent as LogoHeroku } from "./assets/img/heroku.svg";
+import { ReactComponent as LogoSass } from "./assets/img/sass.svg";
+import { ReactComponent as LogoPostman } from "./assets/img/postman.svg";
+import { ReactComponent as LogoGit } from "./assets/img/git.svg";
+import { ReactComponent as LogoVisualStudioCode } from "./assets/img/visualstudiocode.svg";
+
+import Projects from "./components/Project";
+
 function App() {
   return (
     <div className="page">
       <section className="header">
         <div className="header__wrapper">
-          {/* <div className="header_logo"> */}
           <img className="header__logo" src={logo} alt="" />
-
           <nav className="nav">
             <p>Salut</p>
             <img className="nav__github" src={logoGithub} alt="" />
@@ -35,26 +49,80 @@ function App() {
 
       <section className="about">
         <div className="container about__wrapper">
+          <h4>01. À propos</h4>
           <p className="about__text">
             Diplomé d'<strong>Ingénieur</strong> en <strong> calcul scientifique </strong> /
-            <strong> mécanique numérique</strong> et désirant m'orienter vers une carrière dans le
-            <strong> développement web</strong>, j'ai suivis une formation intensive auprès du centre
-            <strong> Le Reacteur</strong>. J'utilise <strong>Javascript</strong>, <strong>HTML</strong>,
-            <strong> CSS </strong>et plus particulièrement <strong>React</strong> et <strong>NodeJS</strong>{" "}
-            avec la stack <strong>MERN</strong>.
+            <strong> mécanique numérique</strong> et désirant m'orienter vers le
+            <strong> développement web</strong>, j'ai alors suivis une formation intensive de développement de
+            <strong> site Web</strong> et d'<strong>application Mobile </strong> auprès du centre
+            <strong> Le Reacteur</strong>.
           </p>
-          <div className="about__mern">
-            <img className="mern__mongodb" src="" alt="" />
-            <img className="mern__express" src="" alt="" />
-            <img className="mern__react" src="" alt="" />
-            <img className="mern__nodejs" src="" alt="" />
+          <p className="about__text">
+            Je travaille avec <strong>Javascript</strong>, <strong>HTML</strong>,<strong> CSS </strong>et plus
+            particulièrement <strong>React</strong> et <strong>NodeJS</strong> avec la stack
+            <strong> MERN</strong>
+          </p>
+
+          <div className="about__technologies">
+            <div className="mern">
+              <LogoMongoDB className="mern__logo mern__logo--mongodb" />
+              <span>MongoDB</span>
+            </div>
+
+            <div className="mern">
+              <LogoExpress className="mern__logo mern__logo--express" />
+              <span>Express</span>
+            </div>
+
+            <div className="mern mern--react">
+              <LogoReact className="mern__logo mern__logo--react" />
+              <span>React</span>
+            </div>
+
+            <div className="mern mern--node">
+              <LogoNode className="mern__logo mern__logo--node" />
+              <span>NodeJs</span>
+            </div>
+          </div>
+          <p className="about__text">et utilise les outils suivants :</p>
+          <div className="about__technologies">
+            <div className="tools">
+              <LogoGit className="tools__logo tools__logo--git" />
+              <span>Git</span>
+            </div>
+
+            <div className="tools">
+              <LogoVisualStudioCode className="tools__logo tools__logo--visual" />
+              <span>Visual Studio Code</span>
+            </div>
+
+            <div className="tools tools--sass">
+              <LogoSass className="tools__logo tools__logo--sass" />
+              <span>Sass</span>
+            </div>
+
+            <div className="tools tools--heroku">
+              <LogoHeroku className="tools__logo tools__logo--heroku" />
+              <span>Heroku</span>
+            </div>
+
+            <div className="tools tools--netlify">
+              <LogoNetlify className="tools__logo tools__logo--netlify" />
+              <span>Netlify</span>
+            </div>
+
+            <div className="tools tools--postman">
+              <LogoPostman className="tools__logo tools__logo--postman" />
+              <span>Postman</span>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="projects">
-        <div className="container">
-          <h4 className="projects__title"></h4>
+        <div className="container project_wrapper">
+          <h4 className="projects__title">02. Portfolio</h4>
+          <Projects />
         </div>
       </section>
     </div>
