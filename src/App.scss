@@ -1,29 +1,97 @@
 :root {
+  font-family: "Mulish", sans-serif;
+
   --container-max-width: 1250px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
 
   --clr-dark: #202124;
-  font-family: "Mulish", sans-serif;
+  --clr-light: white;
+  --clr-detail-3: rgb(128, 188, 252);
+  --clr-detail-2: #1b557b;
+  --clr-detail-1: #0376c2;
+  // --clr-detail: #004777
+
+  --margin-inline: 1.25em;
+  --padding-1 : 0.625em;
+  --padding-2 : 1.25em;
+  --padding-3 : 3em;
+
+  --gradient-blue: linear-gradient(45deg, #81bbe1, #62aada, #4299d2, #2388ca, #0376c2, #0f669f);
+  
+  --fw-black: 900;
+  --fw-bold: 700;
+  --fw-regular: 400;
+  --fw-thin: 200;
+}
+
+@keyframes gradient-bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 .page {
-  // font-family: "Mulish", sans-serif;
   min-height: 100vh;
-  /* background-color: var(--clr-dark); */
-  /* background-color: white; */
+  background-color: white;
 }
+
 .container {
-  width: min(100% - 40px, var(--container-max-width));
+  width: min(100% - (var(--margin-inline) * 2), var(--container-max-width));
   margin: 0 auto;
+}
+
+.button {
+  border: transparent;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 1.35em;
+  font-weight: var(--fw-bold);
+  padding: 0.2em 0.6em;
+  white-space: nowrap;
 }
 
 .header {
   backdrop-filter: brightness(80%) blur(5px);
   background-color: var(--clr-dark);
+  // border: 3px solid red;
 
   &__wrapper {
-    border: 3px solid red;
+    // border: 3px solid red;
+    margin-inline: var(--margin-inline);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 50px;
+    margin-block: 15px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    &__github {
+      height: 35px;
+    }
+
+    &__button {
+      background-color: white;
+      // border: 2px solid white;
+      // border: transparent;
+      // color: var(--clr-detail-2);
+      // color: white;
+
+      .text {
+        background-image: var(--gradient-blue);
+        background-clip: text;
+        color: transparent;
+      }
+    }
   }
 }
 
@@ -35,34 +103,52 @@
   /* background: linear-gradient(to right bottom, var(--clr-dark), rgb(67, 67, 67)); */
   // height: 600px;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
-  margin-bottom: -5vw;
+  // margin-bottom: -5vw;
 
-  &__hello {
-    font-size: 3em;
-    color: rgb(128, 188, 252);
-  }
   &__name {
-    font-size: 4em;
+    font-size: 5em;
+    font-weight: var(--fw-regular);
     color: white;
   }
   &__dev {
-    font-size: 2.25em;
-    color: rgb(128, 188, 252);
+    font-size: 2.5em;
+    width: fit-content;
+    color: var(--clr-detail-3);
+    font-weight: var(--fw-thin);
+
+    animation: gradient-bg-animation 5s infinite alternate;
+    background-image: var(--gradient-blue);
+    background-size: 300%;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__text {
+    margin-top: 1em;
+    color: white;
+    width: 60%;
+    font-size: 0.95em;
+    // border: 3px solid red;
   }
 }
 
 .about {
   // border: 2px solid blue;
-  background-color: white;
-  padding-block: calc(5vw + 20px) 20px;
+  &__wrapper {
+    border: 2px solid red;
+    padding: 2em 3em;
+  }
 
-  &__title {
+  &__text {
+    text-align: justify;
     color: var(--clr-dark);
-    width: 60%;
+    // width: 60%;
+    font-size: 1.05em;
   }
 }
 
 .projects {
+  border: 2px solid pink;
   background: linear-gradient(to top, #3e3e41, var(--clr-dark));
   background-size: contain;
   padding-block: 3em 5em;
@@ -70,5 +156,4 @@
   /* background: linear-gradient(to right bottom, var(--clr-dark), rgb(67, 67, 67)); */
   // height: 600px;
   clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
-  // margin-top: -5vw;
 }
