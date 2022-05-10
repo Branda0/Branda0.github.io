@@ -1,6 +1,11 @@
 import "./App.scss";
-import logo from "./assets/img/logo.png";
-import logoGithub from "./assets/img/github.svg";
+import { useEffect, useState, useRef } from "react";
+
+//Header Icons
+import logoGB from "./assets/img/logo.png";
+import { ReactComponent as LogoSite } from "./assets/img/logo.png";
+import { ReactComponent as LogoContact } from "./assets/img/envelope.svg";
+import { ReactComponent as LogoGithub } from "./assets/img/github.svg";
 
 //MERN LOGOS
 import { ReactComponent as LogoMongoDB } from "./assets/img/mongodb.svg";
@@ -16,25 +21,50 @@ import { ReactComponent as LogoPostman } from "./assets/img/postman.svg";
 import { ReactComponent as LogoGit } from "./assets/img/git.svg";
 import { ReactComponent as LogoVisualStudioCode } from "./assets/img/visualstudiocode.svg";
 
-import Projects from "./components/Project";
+import Project from "./components/Project";
 
 function App() {
+  const heroRef = useRef();
+  const heroOberverOptions = { root: null, rootMargin: "0px" };
+
+  const [isSticked, setIsSticked] = useState(false);
+
+  useEffect(() => {
+    console.log("TEST");
+    const heroObserver = new IntersectionObserver((entries, heroObserver) => {
+      entries.forEach((entry, index) => {
+        console.log(entry.isIntersecting);
+        setIsSticked(!entry.isIntersecting);
+      });
+    }, heroOberverOptions);
+
+    heroObserver.observe(heroRef.current);
+  }, [heroRef]);
   return (
     <div className="page">
-      <section className="header">
+      <section className={`header ${isSticked && "sticked"}`}>
         <div className="header__wrapper">
-          <img className="header__logo" src={logo} alt="" />
+          <img className="header__logo" src={logoGB} alt="site logo" />
           <nav className="nav">
-            <p>Salut</p>
-            <img className="nav__github" src={logoGithub} alt="" />
+            <a className="nav__icon nav__icon--contact" href="mailto:g.brandao.da.cunha@gmail.com">
+              <LogoContact className="logo" />
+            </a>
+            <a className="nav__icon nav__icon--github" href="https://github.com/Branda0" target="_blank">
+              <LogoGithub className="logo" />
+            </a>
+
+            {/* <LogoMongoDB /> */}
+            {/* <img className="contact_" src={logoContact} alt="email link" /> */}
+
             <button className="button nav__button">
-              <span className="text"> Mon CV</span>
+              {/* Mon CV */}
+              <span className="text">Mon CV</span>
             </button>
           </nav>
         </div>
       </section>
 
-      <section className="hero">
+      <section className="hero" ref={heroRef}>
         <div className="container">
           <h2 className="hero__name">Gabriel Brandao</h2>
           <p className="hero__dev">Développeur FullStack</p>
@@ -120,9 +150,10 @@ function App() {
       </section>
 
       <section className="projects">
-        <div className="container project_wrapper">
+        <div className="container projects__wrapper">
           <h4 className="projects__title">02. Portfolio</h4>
-          <Projects />
+          <Project />
+          <Project />
         </div>
       </section>
     </div>
