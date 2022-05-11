@@ -1,56 +1,76 @@
 .project {
+  display: flex;
+  gap: 40px;
   margin: 30px auto;
   width: 70%;
-  //   height: 100px;
-  //   width: 100px;
 
-  //   border: 2px solid red;
-  .card {
+  &__card {
     display: flex;
+    flex-direction: column;
     position: relative;
-    background-color: white;
-    // border: 2px solid pink;
+
+    flex: 2;
+
+    // height: 300px;
+  }
+  &__title {
+    // height: 40px;
+    padding: 0.5em 2em;
+    position: absolute;
+    border-radius: 3px;
+    top: 15px;
+    left: -2%;
+    //   background-color: #2388ca;
+    background-image: var(--gradient-blue);
+    width: 104%;
+    color: white;
+  }
+
+  &__details {
+    background-color: var(--clr-secondary);
     border-radius: 5px;
-    height: 300px;
+    padding: 20px;
+    padding-top: calc(65px);
+    // padding: 20px;
+    // flex: 3;
+    //   background-color: transparent;
+  }
 
-    &__title {
-      height: 40px;
-      position: absolute;
+  .buttons-container {
+    display: flex;
+
+    .button_card {
+      border: 0;
+      background-color: var(--clr-secondary);
+      padding: 0.45em 1em;
+
+      margin-block: 1em;
       border-radius: 3px;
-      top: 15px;
-      left: -2%;
-      background-color: #2388ca;
-      //   background-image: var(--gradient-blue);
-      width: 104%;
-      color: white;
-    }
 
-    &__details {
-      margin-top: calc(65px);
-      //   border: 3px solid green;
-      padding: 20px;
-      flex: 3;
-      //   background-color: transparent;
-    }
-    &__img {
-      //   border: 3px solid orange;
-      //   width: clamp(200px, 200px, 500px);
-      //   flex: 2;
-      max-width: 300px;
-      z-index: 1;
-      overflow: hidden;
-      flex: 2;
-      //   background-color: red;
-      img {
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        object-fit: cover;
-        overflow: hidden;
-        // height: 100%;
-        width: 100%;
-        // width: 100%;
-        // border: 2px solid red;
+      &--first {
+        margin-right: 1em;
       }
+
+      &:hover {
+        background-image: var(--gradient-blue);
+        color: var(--clr-secondary);
+      }
+    }
+  }
+
+  &__img {
+    max-width: 300px;
+    z-index: 1;
+    overflow: hidden;
+    flex: 4;
+    // background-color: red;
+    img {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      object-fit: cover;
+      overflow: hidden;
+      // height: 100%;
+      width: 100%;
     }
   }
 }

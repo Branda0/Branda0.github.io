@@ -59,15 +59,11 @@
 
 .button {
   background-color: transparent;
-  border-radius: 4px;
   font-size: 1em;
   padding: 0.35em 1em;
   font-weight: var(--fw-bold);
   white-space: nowrap;
-  border:2px solid transparent;
-  // border-radius: 2px;
-  border-image: var(--gradient-blue);
-  border-image-slice: 1;
+  cursor: pointer;
 }
 
 .header {
@@ -162,13 +158,12 @@
       cursor: pointer;
       background-size: 400%;
       background-position: right;
-      transition: background-position 500ms;
-      transition: background-size 1s;
-      // border:0;
-      
-      color:var(--clr-secondary);
-      .text {
-       
+      transition: background-size 600ms;
+      border: 2px solid transparent;
+      border-image: var(--gradient-blue);
+      border-image-slice: 1;
+
+      .text {   
         background-image: var(--gradient-blue);
         background-clip: text;
         color: transparent;
@@ -180,8 +175,9 @@
         background-image: var(--gradient-blue);
         border-color: white;
         background-size: 100%;
-        // background-position: -100%;
+       
         .text {
+          
           color:white;
         }
       }

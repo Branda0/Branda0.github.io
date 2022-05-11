@@ -1,6 +1,10 @@
 import "./App.scss";
 import { useEffect, useState, useRef } from "react";
 
+//Font Awesome icons imports
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCode, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 //Header Icons
 import logoGB from "./assets/img/logo.png";
 import { ReactComponent as LogoSite } from "./assets/img/logo.png";
@@ -23,9 +27,11 @@ import { ReactComponent as LogoVisualStudioCode } from "./assets/img/visualstudi
 
 import Project from "./components/Project";
 
+library.add(faCode, faArrowUpRightFromSquare);
+
 function App() {
   const heroRef = useRef();
-  const heroOberverOptions = { root: null, rootMargin: "0px" };
+  const heroOberverOptions = { root: null, rootMargin: "-50px" };
 
   const [isSticked, setIsSticked] = useState(false);
 
