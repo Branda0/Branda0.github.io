@@ -1,20 +1,31 @@
 .project {
+  --flex: flex-start;
+  --align: start;
+  --order: 0;
+
   display: flex;
   gap: 40px;
-  margin: 30px auto;
-  width: 70%;
+  margin: 100px auto;
+  max-width: 900px;
 
   &__card {
     display: flex;
     flex-direction: column;
     position: relative;
-
     flex: 2;
-
-    // height: 300px;
   }
+
+  &__infos {
+    background-color: var(--clr-secondary);
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 70px;
+    box-shadow: 0 3px 20px rgba(black, 0.3);
+  }
+
   &__title {
-    // height: 40px;
+    text-align: var(--align);
+    text-transform: uppercase;
     padding: 0.5em 2em;
     position: absolute;
     border-radius: 3px;
@@ -23,35 +34,38 @@
     //   background-color: #2388ca;
     background-image: var(--gradient-blue);
     width: 104%;
-    color: white;
+    color: var(--clr-secondary);
   }
 
-  &__details {
-    background-color: var(--clr-secondary);
-    border-radius: 5px;
-    padding: 20px;
-    padding-top: calc(65px);
-    // padding: 20px;
-    // flex: 3;
-    //   background-color: transparent;
+  &__badges {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .badge {
+      height: 1.65em;
+    }
   }
 
   .buttons-container {
     display: flex;
+    justify-content: var(--flex);
 
     .button_card {
       border: 0;
       background-color: var(--clr-secondary);
       padding: 0.45em 1em;
-
       margin-block: 1em;
       border-radius: 3px;
+      transition: color 300ms ease;
+      box-shadow: 0 3px 20px rgba(black, 0.3);
 
       &--first {
         margin-right: 1em;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-image: var(--gradient-blue);
         color: var(--clr-secondary);
       }
@@ -59,18 +73,26 @@
   }
 
   &__img {
+    order: var(--order);
     max-width: 300px;
     z-index: 1;
     overflow: hidden;
     flex: 4;
+    overflow: visible;
     // background-color: red;
     img {
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-radius: 3px;
       object-fit: cover;
       overflow: hidden;
       // height: 100%;
       width: 100%;
+      box-shadow: 0 3px 20px rgba(black, 0.3);
     }
+  }
+
+  &--right {
+    --flex: flex-end;
+    --align: end;
+    --order: -1;
   }
 }

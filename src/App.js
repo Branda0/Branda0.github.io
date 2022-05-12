@@ -1,13 +1,8 @@
 import "./App.scss";
 import { useEffect, useState, useRef } from "react";
 
-//Font Awesome icons imports
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCode, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-
 //Header Icons
 import logoGB from "./assets/img/logo.png";
-import { ReactComponent as LogoSite } from "./assets/img/logo.png";
 import { ReactComponent as LogoContact } from "./assets/img/envelope.svg";
 import { ReactComponent as LogoGithub } from "./assets/img/github.svg";
 
@@ -25,8 +20,15 @@ import { ReactComponent as LogoPostman } from "./assets/img/postman.svg";
 import { ReactComponent as LogoGit } from "./assets/img/git.svg";
 import { ReactComponent as LogoVisualStudioCode } from "./assets/img/visualstudiocode.svg";
 
+//Components
 import Project from "./components/Project";
 
+//Projects details
+import projectData from "./assets/data/projects.json";
+
+//Font Awesome icons imports
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCode, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 library.add(faCode, faArrowUpRightFromSquare);
 
 function App() {
@@ -58,12 +60,7 @@ function App() {
             <a className="nav__icon nav__icon--github" href="https://github.com/Branda0" target="_blank">
               <LogoGithub className="logo" />
             </a>
-
-            {/* <LogoMongoDB /> */}
-            {/* <img className="contact_" src={logoContact} alt="email link" /> */}
-
             <button className="button nav__button">
-              {/* Mon CV */}
               <span className="text">Mon CV</span>
             </button>
           </nav>
@@ -85,7 +82,7 @@ function App() {
 
       <section className="about">
         <div className="container about__wrapper">
-          <h4>01. À propos</h4>
+          <h3>01. À propos</h3>
           <p className="about__text">
             Diplomé d'<strong>Ingénieur</strong> en <strong> calcul scientifique </strong> /
             <strong> mécanique numérique</strong> et désirant m'orienter vers le
@@ -157,9 +154,15 @@ function App() {
 
       <section className="projects">
         <div className="container projects__wrapper">
-          <h4 className="projects__title">02. Portfolio</h4>
-          <Project />
-          <Project />
+          <h3 className="projects__title">02. Portfolio</h3>
+          {projectData.map((project, index) => {
+            console.log(project);
+            return (
+              <div>
+                <Project key={index} project={project} index={index} />
+              </div>
+            );
+          })}
         </div>
       </section>
     </div>

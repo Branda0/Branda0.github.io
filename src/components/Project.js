@@ -2,16 +2,20 @@ import "./Project.scss";
 import img from "../assets/img/deliveroo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Project = () => {
+const Project = ({ project, index }) => {
+  // console.log(key);
   return (
-    <div className="project">
+    <div className={`project ${index % 2 === 1 && "project--right"}`}>
       <div className="project__card">
-        <div className="project__details">
-          <h4 className="project__title">Titre Project</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt sint earum, esse, quia
-            digniss
-          </p>
+        <div className="project__infos">
+          <h4 className="project__title">{project.title}</h4>
+          <p className="project__description">{project.description}</p>
+          <p className="project__details">{project.details}</p>
+          <div className="project__badges">
+            {project.badges.map((badge, index) => {
+              return <img className="badge" key={index} src={badge} alt="" />;
+            })}
+          </div>
         </div>
         <div className="buttons-container">
           <button className="button button_card button_card--first">
@@ -23,7 +27,7 @@ const Project = () => {
         </div>
       </div>
       <div className="project__img">
-        <img src={require("../assets/img/deliveroo2.png")} alt="" />
+        <img src={require("../assets/img/deliveroo.png")} alt="" />
       </div>
     </div>
   );
