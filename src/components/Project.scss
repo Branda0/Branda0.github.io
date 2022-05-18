@@ -2,20 +2,24 @@
   --flex: flex-start;
   --align: start;
   --order: 0;
+  --margin-left: -20%;
+  --margin-right: 0%;
+  --scale-origin: right;
 
   display: flex;
   gap: 40px;
   margin: 100px auto;
-  max-width: 900px;
+  max-width: 1000px;
 
   &__card {
     display: flex;
     flex-direction: column;
     position: relative;
-    flex: 2;
+    flex: 3;
   }
 
   &__infos {
+    z-index: 1;
     background-color: var(--clr-secondary);
     border-radius: 5px;
     padding: 20px;
@@ -31,10 +35,13 @@
     border-radius: 3px;
     top: 15px;
     left: -2%;
-    //   background-color: #2388ca;
-    background-image: var(--gradient-blue);
+    background-image: var(--gradient-full);
     width: 104%;
     color: var(--clr-secondary);
+  }
+
+  &__detail {
+    // white-space: pre-wrap;
   }
 
   &__badges {
@@ -52,7 +59,8 @@
     justify-content: var(--flex);
 
     .button_card {
-      border: 0;
+      text-align: center;
+      border: none;
       background-color: var(--clr-secondary);
       padding: 0.45em 1em;
       margin-block: 1em;
@@ -66,27 +74,34 @@
 
       &:hover,
       &:focus {
-        background-image: var(--gradient-blue);
+        background-image: var(--gradient-full);
         color: var(--clr-secondary);
       }
     }
   }
 
   &__img {
+    margin-block: -20px;
+    margin-inline: var(--margin-left) var(--margin-right);
     order: var(--order);
-    max-width: 300px;
-    z-index: 1;
-    overflow: hidden;
-    flex: 4;
     overflow: visible;
-    // background-color: red;
+    flex: 2;
+    filter: blur(1px) brightness(0.5);
+    transition: 0.3s;
+    position: relative;
+
     img {
       border-radius: 3px;
       object-fit: cover;
-      overflow: hidden;
-      // height: 100%;
       width: 100%;
-      box-shadow: 0 3px 20px rgba(black, 0.3);
+      box-shadow: 0 0 20px rgba(black, 0.3);
+    }
+    &:hover {
+      z-index: 1;
+      filter: brightness(1) blur(0);
+      background: none;
+      transform: scale(1.2);
+      transform-origin: var(--scale-origin);
     }
   }
 
@@ -94,5 +109,8 @@
     --flex: flex-end;
     --align: end;
     --order: -1;
+    --margin-left: 0%;
+    --margin-right: -20%;
+    --scale-origin: left;
   }
 }

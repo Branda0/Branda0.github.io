@@ -1,10 +1,11 @@
 import "./App.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState, useRef } from "react";
 
 //Header Icons
 import logoGB from "./assets/img/logo.png";
 import { ReactComponent as LogoContact } from "./assets/img/envelope.svg";
-import { ReactComponent as LogoGithub } from "./assets/img/github.svg";
+import { ReactComponent as LogoGithub } from "./assets/img/github-brands.svg";
 
 //MERN LOGOS
 import { ReactComponent as LogoMongoDB } from "./assets/img/mongodb.svg";
@@ -28,8 +29,10 @@ import projectData from "./assets/data/projects.json";
 
 //Font Awesome icons imports
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCode, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-library.add(faCode, faArrowUpRightFromSquare);
+import { faCode, faArrowUpRightFromSquare, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+library.add(faCode, faArrowUpRightFromSquare, faGithub, faEnvelope);
 
 function App() {
   const heroRef = useRef();
@@ -37,30 +40,42 @@ function App() {
 
   const [isSticked, setIsSticked] = useState(false);
 
+  // Watch leaving of hero section to stick header nav bar
   useEffect(() => {
-    console.log("TEST");
     const heroObserver = new IntersectionObserver((entries, heroObserver) => {
       entries.forEach((entry, index) => {
-        console.log(entry.isIntersecting);
         setIsSticked(!entry.isIntersecting);
       });
     }, heroOberverOptions);
 
     heroObserver.observe(heroRef.current);
   }, [heroRef]);
+
   return (
     <div className="page">
       <section className={`header ${isSticked && "sticked"}`}>
         <div className="header__wrapper">
           <img className="header__logo" src={logoGB} alt="site logo" />
           <nav className="nav">
-            <a className="nav__icon nav__icon--contact" href="mailto:g.brandao.da.cunha@gmail.com">
-              <LogoContact className="logo" />
+            <a
+              className="nav__icon nav__icon--contact"
+              href="mailto:g.brandao.da.cunha@gmail.com"
+              onMouseDown={(event) => event.preventDefault()}
+            >
+              {/* <LogoContact className="logo" /> */}
+              <FontAwesomeIcon icon="envelope" className="logo" />
             </a>
-            <a className="nav__icon nav__icon--github" href="https://github.com/Branda0" target="_blank">
-              <LogoGithub className="logo" />
+            <a
+              className="nav__icon nav__icon--github"
+              href="https://github.com/Branda0"
+              target="_blank"
+              onMouseDown={(event) => event.preventDefault()}
+            >
+              {/* <LogoGithub className="logo" /> */}
+
+              <FontAwesomeIcon icon="fa-brands fa-github" className="logo" />
             </a>
-            <button className="button nav__button">
+            <button className="button nav__button" onMouseDown={(event) => event.preventDefault()}>
               <span className="text">Mon CV</span>
             </button>
           </nav>
@@ -71,12 +86,6 @@ function App() {
         <div className="container">
           <h2 className="hero__name">Gabriel Brandao</h2>
           <p className="hero__dev">Développeur FullStack</p>
-          {/* <p className="hero__text">
-            Diplomé d'<strong>Ingénieur</strong> en <strong> calcul scientifique </strong> /
-            <strong> mécanique numérique</strong> et désirant m'orienter vers une carrière dans le
-            <strong> développement web</strong>, j'ai suivis une formation intensive auprès du centre
-            <strong> Le Reacteur</strong>.
-          </p> */}
         </div>
       </section>
 
@@ -129,24 +138,24 @@ function App() {
               <span>Visual Studio Code</span>
             </div>
 
-            <div className="tools tools--sass">
+            <div className="tools">
               <LogoSass className="tools__logo tools__logo--sass" />
               <span>Sass</span>
             </div>
 
-            <div className="tools tools--heroku">
+            <div className="tools">
+              <LogoPostman className="tools__logo tools__logo--postman" />
+              <span>Postman</span>
+            </div>
+
+            <div className="tools">
               <LogoHeroku className="tools__logo tools__logo--heroku" />
               <span>Heroku</span>
             </div>
 
-            <div className="tools tools--netlify">
+            <div className="tools">
               <LogoNetlify className="tools__logo tools__logo--netlify" />
               <span>Netlify</span>
-            </div>
-
-            <div className="tools tools--postman">
-              <LogoPostman className="tools__logo tools__logo--postman" />
-              <span>Postman</span>
             </div>
           </div>
         </div>
@@ -157,11 +166,7 @@ function App() {
           <h3 className="projects__title">02. Portfolio</h3>
           {projectData.map((project, index) => {
             console.log(project);
-            return (
-              <div>
-                <Project key={index} project={project} index={index} />
-              </div>
-            );
+            return <Project key={index} project={project} index={index} />;
           })}
         </div>
       </section>

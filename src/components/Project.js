@@ -1,5 +1,4 @@
 import "./Project.scss";
-import img from "../assets/img/deliveroo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Project = ({ project, index }) => {
@@ -10,7 +9,13 @@ const Project = ({ project, index }) => {
         <div className="project__infos">
           <h4 className="project__title">{project.title}</h4>
           <p className="project__description">{project.description}</p>
-          <p className="project__details">{project.details}</p>
+          {project.details.map((detail, index) => {
+            return (
+              <p className="project__detail" key={index}>
+                {detail}
+              </p>
+            );
+          })}
           <div className="project__badges">
             {project.badges.map((badge, index) => {
               return <img className="badge" key={index} src={badge} alt="" />;
@@ -18,10 +23,13 @@ const Project = ({ project, index }) => {
           </div>
         </div>
         <div className="buttons-container">
-          <button className="button button_card button_card--first">
+          <button
+            onMouseDown={(event) => event.preventDefault()}
+            className="button button_card button_card--first"
+          >
             <FontAwesomeIcon icon="arrow-up-right-from-square" /> <span>Démo</span>
           </button>
-          <button className="button button_card">
+          <button onMouseDown={(event) => event.preventDefault()} className="button button_card">
             <FontAwesomeIcon icon="code" /> <span>Code</span>
           </button>
         </div>

@@ -27,10 +27,8 @@
   --padding-2: 1.25em;
   --padding-3: 3em;
 
-  --gradient-blue: linear-gradient(45deg, #81bbe1, #0376c2);
-  --gradient-blue: linear-gradient(45deg, #c681e1, #066db1);
-  // --gradient-blue: linear-gradient(45deg, #e18481, #b1ab06);
-  // --gradient-blue: linear-gradient(45deg, #81bbe1, #62aada, #4299d2, #2388ca, #0376c2, #0f669f);
+  --gradient-alpha: linear-gradient(45deg, rgba(#c681e1, 0.5), rgba(#066db1, 0.5));
+  --gradient-full: linear-gradient(45deg, #c681e1, #066db1);
 
   --fw-black: 900;
   --fw-bold: 700;
@@ -62,7 +60,7 @@ h3{
     transform: skew(-30deg);
     left:0;
     bottom: 0;
-    background-image: var(--gradient-blue);
+    background-image: var(--gradient-full);
   }
 }
 
@@ -83,6 +81,10 @@ h3{
   font-weight: var(--fw-bold);
   white-space: nowrap;
   cursor: pointer;
+
+  &:active {
+    transform: scale(1.025);
+  }
 }
 
 section{
@@ -159,14 +161,15 @@ section{
      
       &--github {
         .logo{
-          fill: var(--clr-secondary);    
+          color:var(--clr-secondary);
+          height: 30px;
         }
       }
 
       &--contact {
         background-color: var(--clr-secondary);
         .logo{
-          fill: var(--clr-primary);
+          color:var(--clr-primary);
           height: 18px;
         }
       }
@@ -183,11 +186,11 @@ section{
       background-position: right;
       transition: background-size 600ms;
       border: 2px solid transparent;
-      border-image: var(--gradient-blue);
+      border-image: var(--gradient-full);
       border-image-slice: 1;
 
       .text {   
-        background-image: var(--gradient-blue);
+        background-image: var(--gradient-full);
         background-clip: text;
         color: transparent;
         // color:var(--clr-secondary);
@@ -196,7 +199,7 @@ section{
       &:hover,
       &:focus{
         background-position: left;
-        background-image: var(--gradient-blue);
+        background-image: var(--gradient-full);
         border-color: white;
         background-size: 100%;
        
@@ -228,7 +231,7 @@ section{
     font-weight: var(--fw-thin);
 
     animation: gradient-bg-animation 5s infinite alternate;
-    background-image: var(--gradient-blue);
+    background-image: var(--gradient-full);
     background-size: 300%;
     background-clip: text;
     color: transparent;
