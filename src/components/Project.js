@@ -1,4 +1,5 @@
 import "./Project.scss";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Project = ({ project, index }) => {
@@ -22,20 +23,36 @@ const Project = ({ project, index }) => {
             })}
           </div>
         </div>
+        {/* <Link></Link> */}
         <div className="buttons-container">
-          <button
-            onMouseDown={(event) => event.preventDefault()}
-            className="button button_card button_card--first"
-          >
-            <FontAwesomeIcon icon="arrow-up-right-from-square" /> <span>Démo</span>
-          </button>
-          <button onMouseDown={(event) => event.preventDefault()} className="button button_card">
-            <FontAwesomeIcon icon="code" /> <span>Code</span>
-          </button>
+          {project?.demo && (
+            <a
+              onMouseDown={(event) => event.preventDefault()}
+              href={project.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="button button_card button_card--first"
+            >
+              <FontAwesomeIcon icon="arrow-up-right-from-square" /> <span>Démo</span>
+            </a>
+          )}
+          {project?.code && (
+            <a
+              onMouseDown={(event) => event.preventDefault()}
+              href={project.code}
+              target="_blank"
+              rel="noreferrer"
+              className="button button_card"
+            >
+              <FontAwesomeIcon icon="code" /> <span>Code</span>
+            </a>
+          )}
         </div>
       </div>
       <div className="project__img">
-        <img src={require("../assets/img/deliveroo.png")} alt="" />
+        <img src={require(`../assets/img/screenshot/${project.images}`)} alt="" />
+        {/* <img src="../src/assets/img/deliveroo2.png" alt="" /> */}
+        {/* <img src="/src/public/logo192.png" alt="" /> */}
       </div>
     </div>
   );

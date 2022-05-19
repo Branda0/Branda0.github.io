@@ -59,7 +59,9 @@
     justify-content: var(--flex);
 
     .button_card {
+      text-decoration: none;
       text-align: center;
+      color: var(--clr-primary);
       border: none;
       background-color: var(--clr-secondary);
       padding: 0.45em 1em;

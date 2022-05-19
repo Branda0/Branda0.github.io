@@ -4,8 +4,6 @@ import { useEffect, useState, useRef } from "react";
 
 //Header Icons
 import logoGB from "./assets/img/logo.png";
-import { ReactComponent as LogoContact } from "./assets/img/envelope.svg";
-import { ReactComponent as LogoGithub } from "./assets/img/github-brands.svg";
 
 //MERN LOGOS
 import { ReactComponent as LogoMongoDB } from "./assets/img/mongodb.svg";
@@ -69,6 +67,7 @@ function App() {
               className="nav__icon nav__icon--github"
               href="https://github.com/Branda0"
               target="_blank"
+              rel="noreferrer"
               onMouseDown={(event) => event.preventDefault()}
             >
               {/* <LogoGithub className="logo" /> */}
