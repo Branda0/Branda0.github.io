@@ -51,8 +51,6 @@ const Project = ({ project, index }) => {
       </div>
       <div className="project__img">
         <img src={require(`../assets/img/screenshot/${project.images}`)} alt="" />
-        {/* <img src="../src/assets/img/deliveroo2.png" alt="" /> */}
-        {/* <img src="/src/public/logo192.png" alt="" /> */}
       </div>
     </div>
   );
