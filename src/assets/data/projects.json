@@ -7,12 +7,13 @@
       "https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white",
       "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"
     ],
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt sint earum, esse, quia digniss, Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt sint earum, esse, quia digniss,Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nesciunt sint earum, esse, quia digniss",
+    "description": "Réplique de SIXT, expèrience utilisateur complète de réservation d'automobile",
     "details": [
-      "-Carousels d'image en HTML/CSS<br>salut",
-      "-Carousels d'image en HTML/CSS<br>salut",
-      "-Carousels d'image en HTML/CSS<br>salut",
-      "-Carousels d'image en HTML/CSS<br>salut"
+      "• Affichage des données via le backend faisant appel à une API SIXT",
+      "• Sélection du centre ainsi que de la date et l'heure de retrait / dépot du véhicule",
+      "• Choix du véhicule ainsi que les différentes options disponibles",
+      "• Formulaire utilisateur pour valider la réservation. Reservation enregistrée en base de données (mongoDB) ",
+      "• Backoffice admin (mot de passe : HelloWorld!) pour la visualisation de l'ensemble des réservations"
     ],
     "images": "sixt.png",
     "demo": "https://gabriel-brandao-sixt.netlify.app"
@@ -25,7 +26,7 @@
       "https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white",
       "https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"
     ],
-    "description": "Compilation de comics et personnages de la franchise Marvel ",
+    "description": "Présentation de comics et personnages de la franchise Marvel ",
     "details": [
       "• Affichage des données via le backend faisant appel à une API MARVEL ",
       "• Moteur de recherche pour comics et personnages",
