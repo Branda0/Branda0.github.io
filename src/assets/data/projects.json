@@ -11,8 +11,8 @@
     "details": [
       "• Affichage des données via le backend faisant appel à une API SIXT",
       "• Sélection du centre ainsi que de la date et l'heure de retrait / dépot du véhicule",
-      "• Choix du véhicule ainsi que les différentes options disponibles",
-      "• Formulaire utilisateur pour valider la réservation. Reservation enregistrée en base de données (mongoDB) ",
+      "• Choix du véhicule ainsi que des différentes options disponibles",
+      "• Formulaire utilisateur pour valider la réservation. Réservation enregistrée en base de données (mongoDB) ",
       "• Backoffice admin (mot de passe : HelloWorld!) pour la visualisation de l'ensemble des réservations"
     ],
     "images": "sixt.png",

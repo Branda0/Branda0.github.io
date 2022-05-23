@@ -49,9 +49,9 @@ const Project = ({ project, index }) => {
           )}
         </div>
       </div>
-      <div className="project__img">
-        <img src={require(`../assets/img/screenshot/${project.images}`)} alt="" />
-      </div>
+      {/* <div className="project__img"> */}
+      <img className="test" src={require(`../assets/img/screenshot/${project.images}`)} alt="" />
+      {/* </div> */}
     </div>
   );
 };
