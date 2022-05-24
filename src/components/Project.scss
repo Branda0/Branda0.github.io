@@ -35,7 +35,7 @@
     margin-inline: -2em;
     margin-bottom: 1em;
     border-radius: 3px;
-    background-image: var(--gradient-full);
+    background-image: var(--gradient);
     color: var(--clr-secondary);
   }
 
@@ -88,7 +88,7 @@
 
       &:hover,
       &:focus {
-        background-image: var(--gradient-full);
+        background-image: var(--gradient);
         color: var(--clr-secondary);
       }
     }

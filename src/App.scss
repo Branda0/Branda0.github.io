@@ -6,11 +6,6 @@
   --clr-primary: #202124;
   --clr-secondary: white;
 
-  --clr-detail-3: rgb(128, 188, 252);
-  --clr-detail-2: #1b557b;
-  --clr-detail-1: #0376c2;
-  // --clr-detail: #004777
-
   --clr-mongodb: #47a248;
   --clr-express: #333;
   --clr-react: #61dafb;
@@ -27,8 +22,7 @@
   --padding-2: 1.25em;
   --padding-3: 3em;
 
-  --gradient-alpha: linear-gradient(45deg, rgba(#c681e1, 0.5), rgba(#066db1, 0.5));
-  --gradient-full: linear-gradient(45deg, #c681e1, #066db1);
+  --gradient: linear-gradient(45deg, #c681e1, #066db1);
 
   --fw-black: 900;
   --fw-bold: 700;
@@ -60,7 +54,7 @@ h3{
     transform: skew(-30deg);
     left:0;
     bottom: 0;
-    background-image: var(--gradient-full);
+    background-image: var(--gradient);
   }
 }
 
@@ -186,11 +180,11 @@ section{
       background-position: right;
       transition: background-size 600ms;
       border: 2px solid transparent;
-      border-image: var(--gradient-full);
+      border-image: var(--gradient);
       border-image-slice: 1;
 
       .text {   
-        background-image: var(--gradient-full);
+        background-image: var(--gradient);
         background-clip: text;
         color: transparent;
         // color:var(--clr-secondary);
@@ -199,7 +193,7 @@ section{
       &:hover,
       &:focus{
         background-position: left;
-        background-image: var(--gradient-full);
+        background-image: var(--gradient);
         border-color: white;
         background-size: 100%;
        
@@ -227,11 +221,10 @@ section{
   &__dev {
     font-size: 2.5em;
     width: fit-content;
-    color: var(--clr-detail-3);
     font-weight: var(--fw-thin);
 
     animation: gradient-bg-animation 5s infinite alternate;
-    background-image: var(--gradient-full);
+    background-image: var(--gradient);
     background-size: 300%;
     background-clip: text;
     color: transparent;
