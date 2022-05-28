@@ -259,7 +259,8 @@ section{
     display: flex;
     justify-content: center;
     gap: var(--padding-3);
-    padding-block: 1em;
+    padding-block: 1.25em;
+    flex-wrap: wrap;
 
     .mern {
       display: flex;
@@ -268,7 +269,7 @@ section{
 
       &__logo {
         margin-bottom: 5px;
-        height: 60px;
+        height: 4em;
         padding: var(--padding-1);
         border: 3px solid black;
         border-radius: 50%;
@@ -299,15 +300,14 @@ section{
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100px;
+      width: 6em;
       text-align: center;
+      
       // border:3px solid black;
 
       &__logo {
         margin-bottom: 10px;
-        width: 50px;
-        // height: 70px;
-        // padding: var(--padding-1);
+        width: 3.5em;
 
         &--git {
           fill: var(--clr-git);
@@ -339,8 +339,6 @@ section{
 
 .projects {
   clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
-  // margin-top: 5vw;
-  // border: 4px solid pink;
   background: linear-gradient(to top, #3e3e41, var(--clr-primary));
   background-size: contain;
   padding-block: calc(5vw + 3em) 2em;
@@ -352,4 +350,10 @@ section{
   &__title {
     color: var(--clr-secondary);
   }
+}
+
+@media (max-width: 900px) {
+  :root {
+    font-size: 0.8em;
+  }  
 }

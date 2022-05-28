@@ -22,6 +22,11 @@ const Project = ({ project, index }) => {
               return <img className="badge" key={index} src={badge} alt="" />;
             })}
           </div>
+          <img
+            className="project__mobile-img"
+            src={require(`../assets/img/screenshot/${project.images}`)}
+            alt=""
+          />
         </div>
         {/* <Link></Link> */}
         <div className="buttons-container">
@@ -50,7 +55,7 @@ const Project = ({ project, index }) => {
         </div>
       </div>
       {/* <div className="project__img"> */}
-      <img className="test" src={require(`../assets/img/screenshot/${project.images}`)} alt="" />
+      <img className="project__img" src={require(`../assets/img/screenshot/${project.images}`)} alt="" />
       {/* </div> */}
     </div>
   );

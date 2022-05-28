@@ -94,7 +94,7 @@ function App() {
           <p className="about__text">
             Diplomé d'<strong>Ingénieur</strong> en <strong> calcul scientifique </strong> /
             <strong> mécanique numérique</strong> et désirant m'orienter vers le
-            <strong> développement web</strong>, j'ai alors suivis une formation intensive de développement de
+            <strong> développement web</strong>, j'ai alors suivi une formation intensive de développement de
             <strong> site Web</strong> et d'<strong>application Mobile </strong> auprès du centre
             <strong> Le Reacteur</strong>.
           </p>
@@ -115,12 +115,12 @@ function App() {
               <span>Express</span>
             </div>
 
-            <div className="mern mern--react">
+            <div className="mern">
               <LogoReact className="mern__logo mern__logo--react" />
               <span>React</span>
             </div>
 
-            <div className="mern mern--node">
+            <div className="mern">
               <LogoNode className="mern__logo mern__logo--node" />
               <span>NodeJs</span>
             </div>
