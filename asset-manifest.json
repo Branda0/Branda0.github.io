@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.8132aa94.css",
-    "main.js": "/static/js/main.0e3a4cd1.js",
+    "main.css": "/static/css/main.a362575a.css",
+    "main.js": "/static/js/main.5506cb88.js",
+    "static/media/CV_Brandao-Gabriel.pdf": "/static/media/CV_Brandao-Gabriel.a46a2536c3431cdde441.pdf",
     "static/media/vinted.png": "/static/media/vinted.aa3214e9f03221cbffe5.png",
     "static/media/marvel.png": "/static/media/marvel.87bb20f5cab17604cf3c.png",
     "static/media/tripadvisor.png": "/static/media/tripadvisor.579a753a55b0d61bb6c1.png",
@@ -19,11 +20,11 @@
     "static/media/heroku.svg": "/static/media/heroku.9dee12cefa8a114bda7e2363938f00ca.svg",
     "static/media/mongodb.svg": "/static/media/mongodb.d930c2c4198d1000c2fb8b7d3177a44c.svg",
     "static/media/visualstudiocode.svg": "/static/media/visualstudiocode.6406a36787aaeb68a7d68951e2191d51.svg",
-    "main.8132aa94.css.map": "/static/css/main.8132aa94.css.map",
-    "main.0e3a4cd1.js.map": "/static/js/main.0e3a4cd1.js.map"
+    "main.a362575a.css.map": "/static/css/main.a362575a.css.map",
+    "main.5506cb88.js.map": "/static/js/main.5506cb88.js.map"
   },
   "entrypoints": [
-    "static/css/main.8132aa94.css",
-    "static/js/main.0e3a4cd1.js"
+    "static/css/main.a362575a.css",
+    "static/js/main.5506cb88.js"
   ]
 }
