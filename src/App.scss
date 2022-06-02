@@ -71,6 +71,7 @@ h3{
 .button {
   background-color: transparent;
   font-size: 1em;
+  text-decoration: none;
   padding: 0.35em 1em;
   font-weight: var(--fw-bold);
   white-space: nowrap;
@@ -79,10 +80,6 @@ h3{
   &:active {
     transform: scale(1.025);
   }
-}
-
-section{
-  // border:2px solid green;
 }
 
 .header {

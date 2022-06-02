@@ -5,6 +5,9 @@ import { useEffect, useState, useRef } from "react";
 //Header Icons
 import logoGB from "./assets/img/logo.png";
 
+//PDF CV import
+import cv from "./assets/pdf/CV_Brandao-Gabriel.pdf";
+
 //MERN LOGOS
 import { ReactComponent as LogoMongoDB } from "./assets/img/mongodb.svg";
 import { ReactComponent as LogoExpress } from "./assets/img/express.svg";
@@ -74,9 +77,15 @@ function App() {
 
               <FontAwesomeIcon icon="fa-brands fa-github" className="logo" />
             </a>
-            <button className="button nav__button" onMouseDown={(event) => event.preventDefault()}>
+            <a
+              className="button nav__button"
+              href={cv}
+              target="_blank"
+              rel="noreferrer"
+              onMouseDown={(event) => event.preventDefault()}
+            >
               <span className="text">Mon CV</span>
-            </button>
+            </a>
           </nav>
         </div>
       </section>
@@ -99,7 +108,7 @@ function App() {
             <strong> Le Reacteur</strong>.
           </p>
           <p className="about__text">
-            Je travaille avec <strong>Javascript</strong>, <strong>HTML</strong>,<strong> CSS </strong>et plus
+            Je travaille avec <strong>JavaScript</strong>, <strong>HTML</strong>,<strong> CSS </strong>et plus
             particulièrement <strong>React</strong> et <strong>NodeJS</strong> avec la stack
             <strong> MERN</strong>
           </p>
