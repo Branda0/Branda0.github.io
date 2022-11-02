@@ -101,7 +101,7 @@ function App() {
         <div className="container about__wrapper">
           <h3>01. À propos</h3>
           <p className="about__text">
-            Diplomé d'<strong>Ingénieur</strong> en <strong> calcul scientifique </strong> /
+            Diplômé d'<strong>Ingénieur</strong> en <strong> calcul scientifique </strong> /
             <strong> mécanique numérique</strong> et désirant m'orienter vers le
             <strong> développement web</strong>, j'ai alors suivi une formation intensive de développement de
             <strong> site Web</strong> et d'<strong>application Mobile </strong> auprès du centre
@@ -173,7 +173,6 @@ function App() {
         <div className="container projects__wrapper">
           <h3 className="projects__title">02. Portfolio</h3>
           {projectData.map((project, index) => {
-            console.log(project);
             return <Project key={index} project={project} index={index} />;
           })}
         </div>
