@@ -1,5 +1,4 @@
 import "./Project.scss";
-import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Project = ({ project, index }) => {
@@ -55,7 +54,12 @@ const Project = ({ project, index }) => {
         </div>
       </div>
       {/* <div className="project__img"> */}
-      <img className="project__img" src={require(`../assets/img/screenshot/${project.images}`)} alt="" />
+      <img
+        className="project__img"
+        src={require(`../assets/img/screenshot/${project.images}`)}
+        alt="project-screenshot"
+        loading="lazy"
+      />
       {/* </div> */}
     </div>
   );

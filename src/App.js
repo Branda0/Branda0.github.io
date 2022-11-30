@@ -1,6 +1,6 @@
 import "./App.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState, useRef } from "react";
+import React, { Suspense, lazy, useEffect, useState, useRef } from "react";
 
 //Header Icons
 import logoGB from "./assets/img/logo.png";
@@ -22,9 +22,6 @@ import { ReactComponent as LogoPostman } from "./assets/img/postman.svg";
 import { ReactComponent as LogoGit } from "./assets/img/git.svg";
 import { ReactComponent as LogoVisualStudioCode } from "./assets/img/visualstudiocode.svg";
 
-//Components
-import Project from "./components/Project";
-
 //Projects details
 import projectData from "./assets/data/projects.json";
 
@@ -34,6 +31,10 @@ import { faCode, faArrowUpRightFromSquare, faEnvelope } from "@fortawesome/free-
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 library.add(faCode, faArrowUpRightFromSquare, faGithub, faEnvelope);
+
+//Components
+// import Project from "./components/Project";
+const Project = React.lazy(() => import("./components/Project"));
 
 function App() {
   const heroRef = useRef();
@@ -173,7 +174,11 @@ function App() {
         <div className="container projects__wrapper">
           <h3 className="projects__title">02. Portfolio</h3>
           {projectData.map((project, index) => {
-            return <Project key={index} project={project} index={index} />;
+            return (
+              // <Suspense fallback={<div>Loading ...</div>}>
+              <Project key={index} project={project} index={index} />
+              // </Suspense>
+            );
           })}
         </div>
       </section>

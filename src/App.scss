@@ -39,20 +39,20 @@
   }
 }
 
-h3{
+h3 {
   position: relative;
   font-size: 1.25em;
   width: fit-content;
   padding-bottom: 0.25em;
   margin-bottom: 2em;
 
-  &::after{
+  &::after {
     position: absolute;
     content: "";
     width: 100%;
     height: 10%;
     transform: skew(-30deg);
-    left:0;
+    left: 0;
     bottom: 0;
     background-image: var(--gradient);
   }
@@ -91,34 +91,31 @@ h3{
   // border: 3px solid red;
   // transform: translateY(-200px);
 
-  &.sticked{
-    --clr-primary : white;
-    --clr-secondary : #202124;
+  &.sticked {
+    --clr-primary: white;
+    --clr-secondary: #202124;
 
     padding: 10px 0;
     justify-content: end;
     align-items: flex-end;
 
-    
     // box-shadow: 0px 2px 6px 4px var(--clr-primary);
-    box-shadow: 0 3px 20px rgba(#202124,0.2); 
+    box-shadow: 0 3px 20px rgba(#202124, 0.2);
     // background-color: white;
     position: sticky;
-    top:-200px;
+    top: -200px;
     transform: translateY(200px);
 
-    img{
+    img {
       filter: brightness(0.25);
     }
 
-    .header__wrapper{
+    .header__wrapper {
       justify-content: flex-end;
     }
-    .header__logo{
+    .header__logo {
       display: none;
     }
-
-
   }
 
   &__wrapper {
@@ -131,7 +128,7 @@ h3{
 
   &__logo {
     height: 50px;
-    margin-block: 15px;    
+    margin-block: 15px;
   }
 
   .nav {
@@ -146,30 +143,30 @@ h3{
       height: 30px;
       width: 30px;
       border-radius: 50%;
-      border:1px solid var(--clr-primary);
+      border: 1px solid var(--clr-primary);
       cursor: pointer;
       transition: transform 200ms ease;
-     
+
       &--github {
-        .logo{
-          color:var(--clr-secondary);
+        .logo {
+          color: var(--clr-secondary);
           height: 30px;
         }
       }
 
       &--contact {
         background-color: var(--clr-secondary);
-        .logo{
-          color:var(--clr-primary);
+        .logo {
+          color: var(--clr-primary);
           height: 18px;
         }
       }
 
-      &:hover,&:focus{
+      &:hover,
+      &:focus {
         transform: translateY(-2px);
       }
     }
-
 
     &__button {
       cursor: pointer;
@@ -180,7 +177,7 @@ h3{
       border-image: var(--gradient);
       border-image-slice: 1;
 
-      .text {   
+      .text {
         background-image: var(--gradient);
         background-clip: text;
         color: transparent;
@@ -188,15 +185,14 @@ h3{
       }
 
       &:hover,
-      &:focus{
+      &:focus {
         background-position: left;
         background-image: var(--gradient);
         border-color: white;
         background-size: 100%;
-       
+
         .text {
-          
-          color:white;
+          color: white;
         }
       }
     }
@@ -206,7 +202,7 @@ h3{
 .hero {
   background: linear-gradient(to top, #3e3e41, var(--clr-primary));
   background-size: contain;
-  padding-block: 3em 5em; 
+  padding-block: 3em 5em;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
   // margin-bottom: -5vw;
 
@@ -237,7 +233,6 @@ h3{
 }
 
 .about {
-  
   &__wrapper {
     // border: 2px solid red;
     // padding: var(--padding-2);
@@ -299,7 +294,7 @@ h3{
       align-items: center;
       width: 6em;
       text-align: center;
-      
+
       // border:3px solid black;
 
       &__logo {
@@ -352,5 +347,5 @@ h3{
 @media (max-width: 900px) {
   :root {
     font-size: 0.8em;
-  }  
+  }
 }
