@@ -344,6 +344,20 @@ h3 {
   }
 }
 
+.footer {
+  background-color: var(--clr-primary);
+  border: 0;
+
+  &__text {
+    width: 100%;
+    padding: 0.2rem;
+    color: white;
+
+    font-weight: 100;
+    text-align: center;
+  }
+}
+
 @media (max-width: 900px) {
   :root {
     font-size: 0.8em;

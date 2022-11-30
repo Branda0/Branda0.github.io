@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className="page">
-      <section className={`header ${isSticked && "sticked"}`}>
+      <header className={`header ${isSticked && "sticked"}`}>
         <div className="header__wrapper">
           <img className="header__logo" src={logoGB} alt="site logo" />
           <nav className="nav">
@@ -89,99 +89,104 @@ function App() {
             </a>
           </nav>
         </div>
-      </section>
+      </header>
+      <main>
+        <section className="hero" ref={heroRef}>
+          <div className="container">
+            <h2 className="hero__name">Gabriel Brandao</h2>
+            <p className="hero__dev">Développeur FullStack</p>
+          </div>
+        </section>
 
-      <section className="hero" ref={heroRef}>
-        <div className="container">
-          <h2 className="hero__name">Gabriel Brandao</h2>
-          <p className="hero__dev">Développeur FullStack</p>
-        </div>
-      </section>
+        <section className="about">
+          <div className="container about__wrapper">
+            <h3>01. À propos</h3>
+            <p className="about__text">
+              Diplômé d'<strong>Ingénieur</strong> en <strong> calcul scientifique </strong> /
+              <strong> mécanique numérique</strong> et désirant m'orienter vers le
+              <strong> développement web</strong>, j'ai alors suivi une formation intensive de développement
+              de
+              <strong> site Web</strong> et d'<strong>application Mobile </strong> auprès du centre
+              <strong> Le Reacteur</strong>.
+            </p>
+            <p className="about__text">
+              Je travaille avec <strong>JavaScript</strong>, <strong>HTML</strong>,<strong> CSS </strong>et
+              plus particulièrement <strong>React</strong> et <strong>NodeJS</strong> avec la stack
+              <strong> MERN</strong>
+            </p>
 
-      <section className="about">
-        <div className="container about__wrapper">
-          <h3>01. À propos</h3>
-          <p className="about__text">
-            Diplômé d'<strong>Ingénieur</strong> en <strong> calcul scientifique </strong> /
-            <strong> mécanique numérique</strong> et désirant m'orienter vers le
-            <strong> développement web</strong>, j'ai alors suivi une formation intensive de développement de
-            <strong> site Web</strong> et d'<strong>application Mobile </strong> auprès du centre
-            <strong> Le Reacteur</strong>.
-          </p>
-          <p className="about__text">
-            Je travaille avec <strong>JavaScript</strong>, <strong>HTML</strong>,<strong> CSS </strong>et plus
-            particulièrement <strong>React</strong> et <strong>NodeJS</strong> avec la stack
-            <strong> MERN</strong>
-          </p>
+            <div className="about__technologies">
+              <div className="mern">
+                <LogoMongoDB className="mern__logo mern__logo--mongodb" />
+                <span>MongoDB</span>
+              </div>
 
-          <div className="about__technologies">
-            <div className="mern">
-              <LogoMongoDB className="mern__logo mern__logo--mongodb" />
-              <span>MongoDB</span>
+              <div className="mern">
+                <LogoExpress className="mern__logo mern__logo--express" />
+                <span>Express</span>
+              </div>
+
+              <div className="mern">
+                <LogoReact className="mern__logo mern__logo--react" />
+                <span>React</span>
+              </div>
+
+              <div className="mern">
+                <LogoNode className="mern__logo mern__logo--node" />
+                <span>NodeJs</span>
+              </div>
             </div>
+            <p className="about__text">et utilise les outils suivants :</p>
+            <div className="about__technologies">
+              <div className="tools">
+                <LogoGit className="tools__logo tools__logo--git" />
+                <span>Git</span>
+              </div>
 
-            <div className="mern">
-              <LogoExpress className="mern__logo mern__logo--express" />
-              <span>Express</span>
-            </div>
+              <div className="tools">
+                <LogoVisualStudioCode className="tools__logo tools__logo--visual" />
+                <span>Visual Studio Code</span>
+              </div>
 
-            <div className="mern">
-              <LogoReact className="mern__logo mern__logo--react" />
-              <span>React</span>
-            </div>
+              <div className="tools">
+                <LogoSass className="tools__logo tools__logo--sass" />
+                <span>Sass</span>
+              </div>
 
-            <div className="mern">
-              <LogoNode className="mern__logo mern__logo--node" />
-              <span>NodeJs</span>
+              <div className="tools">
+                <LogoPostman className="tools__logo tools__logo--postman" />
+                <span>Postman</span>
+              </div>
+
+              <div className="tools">
+                <LogoHeroku className="tools__logo tools__logo--heroku" />
+                <span>Heroku</span>
+              </div>
+
+              <div className="tools">
+                <LogoNetlify className="tools__logo tools__logo--netlify" />
+                <span>Netlify</span>
+              </div>
             </div>
           </div>
-          <p className="about__text">et utilise les outils suivants :</p>
-          <div className="about__technologies">
-            <div className="tools">
-              <LogoGit className="tools__logo tools__logo--git" />
-              <span>Git</span>
-            </div>
+        </section>
 
-            <div className="tools">
-              <LogoVisualStudioCode className="tools__logo tools__logo--visual" />
-              <span>Visual Studio Code</span>
-            </div>
-
-            <div className="tools">
-              <LogoSass className="tools__logo tools__logo--sass" />
-              <span>Sass</span>
-            </div>
-
-            <div className="tools">
-              <LogoPostman className="tools__logo tools__logo--postman" />
-              <span>Postman</span>
-            </div>
-
-            <div className="tools">
-              <LogoHeroku className="tools__logo tools__logo--heroku" />
-              <span>Heroku</span>
-            </div>
-
-            <div className="tools">
-              <LogoNetlify className="tools__logo tools__logo--netlify" />
-              <span>Netlify</span>
-            </div>
+        <section className="projects">
+          <div className="container projects__wrapper">
+            <h3 className="projects__title">02. Portfolio</h3>
+            {projectData.map((project, index) => {
+              return (
+                // <Suspense fallback={<div>Loading ...</div>}>
+                <Project key={index} project={project} index={index} />
+                // </Suspense>
+              );
+            })}
           </div>
-        </div>
-      </section>
-
-      <section className="projects">
-        <div className="container projects__wrapper">
-          <h3 className="projects__title">02. Portfolio</h3>
-          {projectData.map((project, index) => {
-            return (
-              // <Suspense fallback={<div>Loading ...</div>}>
-              <Project key={index} project={project} index={index} />
-              // </Suspense>
-            );
-          })}
-        </div>
-      </section>
+        </section>
+      </main>
+      <div className="footer">
+        <p className="footer__text">Gabriel Brandao • 2022</p>
+      </div>
     </div>
   );
 }
