@@ -109,8 +109,8 @@
     filter: blur(1px) brightness(0.5);
     transition: 0.4s ease;
     height: auto;
-    overflow: visible;
-    border-radius: 3px;
+    // overflow: hidden;
+    border-radius: 5px;
     box-shadow: 0 0 20px rgba(black, 0.3);
 
     &:hover {
