@@ -8,7 +8,7 @@
     ],
     "description": "Une application web qui vous permet de parcourir et découvrir tous les différents Pokemon",
     "details": [
-      "• Le backend consume l'api PoKéAPI et délivre des données reformatée au frontend",
+      "• Le backend consume l'api PoKéAPI et délivre des données reformatées au frontend",
       "• Affichage paginé de Pokemons sous forme de grille",
       "• Barre de recherche par nom ou ID du Pokemon",
       "• Page dédiée à l'affichage détaillé d’informations concernant un Pokemon (statistiques, détails, évolutions)",
