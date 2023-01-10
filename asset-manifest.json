@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.0958f593.css",
-    "main.js": "/static/js/main.0bd9e1c7.js",
-    "static/css/210.70ecd4a5.chunk.css": "/static/css/210.70ecd4a5.chunk.css",
-    "static/js/210.9033e14f.chunk.js": "/static/js/210.9033e14f.chunk.js",
+    "main.js": "/static/js/main.7e756215.js",
+    "static/css/210.5d280167.chunk.css": "/static/css/210.5d280167.chunk.css",
+    "static/js/210.ea9d3e71.chunk.js": "/static/js/210.ea9d3e71.chunk.js",
     "static/media/CV_Brandao-Gabriel.pdf": "/static/media/CV_Brandao-Gabriel.a46a2536c3431cdde441.pdf",
     "static/media/vinted.png": "/static/media/vinted.aa3214e9f03221cbffe5.png",
+    "static/media/pokedex.png": "/static/media/pokedex.f01ab2a7ce5b099fb293.png",
     "static/media/marvel.png": "/static/media/marvel.87bb20f5cab17604cf3c.png",
     "static/media/tripadvisor.png": "/static/media/tripadvisor.579a753a55b0d61bb6c1.png",
     "static/media/sixt.png": "/static/media/sixt.335b3f5b3207360d9dfb.png",
@@ -24,12 +25,12 @@
     "static/media/mongodb.svg": "/static/media/mongodb.d930c2c4198d1000c2fb8b7d3177a44c.svg",
     "static/media/visualstudiocode.svg": "/static/media/visualstudiocode.6406a36787aaeb68a7d68951e2191d51.svg",
     "main.0958f593.css.map": "/static/css/main.0958f593.css.map",
-    "main.0bd9e1c7.js.map": "/static/js/main.0bd9e1c7.js.map",
-    "210.70ecd4a5.chunk.css.map": "/static/css/210.70ecd4a5.chunk.css.map",
-    "210.9033e14f.chunk.js.map": "/static/js/210.9033e14f.chunk.js.map"
+    "main.7e756215.js.map": "/static/js/main.7e756215.js.map",
+    "210.5d280167.chunk.css.map": "/static/css/210.5d280167.chunk.css.map",
+    "210.ea9d3e71.chunk.js.map": "/static/js/210.ea9d3e71.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0958f593.css",
-    "static/js/main.0bd9e1c7.js"
+    "static/js/main.7e756215.js"
   ]
 }
