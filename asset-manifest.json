@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0958f593.css",
-    "main.js": "/static/js/main.7e756215.js",
+    "main.js": "/static/js/main.552a1c3b.js",
     "static/css/210.5d280167.chunk.css": "/static/css/210.5d280167.chunk.css",
     "static/js/210.ea9d3e71.chunk.js": "/static/js/210.ea9d3e71.chunk.js",
     "static/media/CV_Brandao-Gabriel.pdf": "/static/media/CV_Brandao-Gabriel.a46a2536c3431cdde441.pdf",
@@ -25,12 +25,12 @@
     "static/media/mongodb.svg": "/static/media/mongodb.d930c2c4198d1000c2fb8b7d3177a44c.svg",
     "static/media/visualstudiocode.svg": "/static/media/visualstudiocode.6406a36787aaeb68a7d68951e2191d51.svg",
     "main.0958f593.css.map": "/static/css/main.0958f593.css.map",
-    "main.7e756215.js.map": "/static/js/main.7e756215.js.map",
+    "main.552a1c3b.js.map": "/static/js/main.552a1c3b.js.map",
     "210.5d280167.chunk.css.map": "/static/css/210.5d280167.chunk.css.map",
     "210.ea9d3e71.chunk.js.map": "/static/js/210.ea9d3e71.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0958f593.css",
-    "static/js/main.7e756215.js"
+    "static/js/main.552a1c3b.js"
   ]
 }
