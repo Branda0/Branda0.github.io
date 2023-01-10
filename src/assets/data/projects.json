@@ -1,9 +1,28 @@
 [
   {
+    "title": "POKEDEX - fullstack",
+    "badges": [
+      "https://img.shields.io/badge/Nest.js-E0234E?style=for-the-badge&logo=nestjs&logoColor=white",
+      "https://img.shields.io/badge/React.JS-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+      "https://img.shields.io/badge/Tailwind-08B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"
+    ],
+    "description": "Une application web qui vous permet de parcourir et découvrir tous les différents Pokemon",
+    "details": [
+      "• Le backend consume l'api PoKéAPI et délivre des données reformatée au frontend",
+      "• Affichage paginé de Pokemons sous forme de grille",
+      "• Barre de recherche par nom ou ID du Pokemon",
+      "• Page dédiée à l'affichage détaillé d’informations concernant un Pokemon (statistiques, détails, évolutions)",
+      "• Mobile responsive"
+    ],
+    "images": "pokedex.png",
+    "demo": "https://pokedex-branda0.netlify.app/",
+    "code": "https://github.com/Branda0/pokedex"
+  },
+  {
     "title": "SECRET SANTA - fullstack",
     "badges": [
       "https://img.shields.io/badge/Next.JS-black?style=for-the-badge&logo=next.js&logoColor=white",
-      "https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white",
+      "https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwind&logoColor=white",
       "https://img.shields.io/badge/Node.js-016E06?style=for-the-badge&logo=node.js&logoColor=white",
       "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"
     ],
@@ -12,7 +31,8 @@
       "• Création de groupes avec possibilité de définir des contraintes de sous-groupes",
       "• Algorithme de génération aléatoire et sous contraintes d'une liste d'échange entre les différents participants - Résolution de graphe par un cycle Hamiltonien",
       "• Inscription et connexion des utilisateurs, tokens de session stockés dans les cookies",
-      "• Accès aux données du secret santa soumis à authentification via le token de session"
+      "• Accès aux données du secret santa soumis à authentification via le token de session",
+      "• Mobile responsive"
     ],
     "images": "secretsanta.png",
     "demo": "https://secret-santa-branda0.vercel.app/",
@@ -53,7 +73,7 @@
       "• Moteur de recherche pour comics et personnages",
       "• Système d'inscription / connexion. Mot de passe sécurisé en base de données (hash + salt), token de connexion stocké dans les cookies",
       "• Possibilité de marquer certains comics ou personnages comme favoris, liste des favoris visibles sur une page additionelle",
-      "• 100% responsive"
+      "• Mobile responsive"
     ],
     "images": "marvel.png",
     "code": "https://github.com/Branda0/marvel-front",
@@ -75,7 +95,7 @@
       "• Système d'inscription / connexion. Mot de passe sécurisé en base de données (hash + salt), token de connexion stocké dans les cookies",
       "• Dépot d'article avec upload de photo",
       "• Procédure d'achat via stripe (carte bancaire mode test : 424242...42424)",
-      "• 100% responsive"
+      "• Mobile responsive"
     ],
     "images": "vinted.png",
     "demo": "https://vinted-brandao.netlify.app/",
@@ -93,7 +113,7 @@
     "details": [
       " • \"useEffect hook\" pour la récupération des données du restaurant",
       " • \"useState hook\" pour la gestion du panier d'achat (ajout / retrait de plats, modification de la quantitée)",
-      " • 100% responsive"
+      "• Mobile responsive"
     ],
     "images": "deliveroo.png",
     "demo": "https://deliveroo-brandao.netlify.app/",
